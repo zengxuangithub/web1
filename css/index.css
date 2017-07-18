@@ -1,0 +1,121 @@
+.logo
+{
+	float: left;
+	
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 100px;
+	width: 200px;
+	
+}
+.tipsBox
+{
+	float: left;
+	
+
+	position: absolute;
+	left: 0;
+	bottom: 20px;
+	margin-left: 220px;
+	
+}
+.name
+{
+	font-size: 20px;
+}
+.tips
+{
+	font-size: 16px;
+	margin-top: 10px;
+	color: gray;
+	font-family: "微软雅黑";
+}
+
+.logo img
+{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+header
+{
+	position: relative;
+	height: 100px;
+	background-color: aqua;
+}
+.tipsBox
+{
+	background-color: aqua;
+	
+	
+}
+.scrollbox
+{
+	     width: 960px; 
+	     height: 120px;
+	    margin: 100px auto;      
+	    background-color: #646464;      
+	    position: relative;      
+	    overflow: hidden;
+}
+
+
+.scrollbox ul{      
+	position:absolute;      
+	left:0;      
+	top:0;      
+	overflow: hidden;      
+	background-color: #3b7796;    
+	}
+
+
+
+ .scrollbox ul li{      
+ 	float: left;      
+ 	width: 160px;      
+ 	height: 120px;      
+ 	list-style: none;    
+ 	}
+ 	
+
+.li0
+{
+	width: 100%;
+	height: 100%;
+	background-color:#00FFFF ;
+}
+
+.li1
+{
+	width: 100%;
+	height: 100%;
+	background-color:#00FFFF ;
+}
+
+.li2
+{
+	width: 100%;
+	height: 100%;
+	background-color:#00FFFF ;
+}
+
+.li3
+{
+	width: 100%;
+	height: 100%;
+	background-color:#00FFFF ;
+}
+
+.li4
+{
+	width: 100%;
+	height: 100%;
+	background-color:#00FFFF ;
+}
+.li5
+{
+	width: 100%;
+	height: 100%;
+	background-color:#00FFFF ;
+}
