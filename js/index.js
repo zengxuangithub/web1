@@ -6,7 +6,7 @@ window.onload = function()
 	var oUl = document.getElementById('ul1');
 	var screenwith=oDiv.offsetWidth;
 	var speed = 1;//初始化速度       
-	//oUl.innerHTML += oUl.innerHTML;//图片内容*2-----参考图（2）
+	oUl.innerHTML += oUl.innerHTML;//图片内容*2-----参考图（2）
 	var oLi= document.getElementsByTagName('li');     
 	oUl.style.width = oLi.length*screenwith+'px';//设置ul的宽度使图片可以放下
 	var oBtn1 = document.getElementById('btn1');    
@@ -35,9 +35,10 @@ window.onload = function()
 		
 		
 		stop=1;
-		//console.log("1offsetleft-------->"+oUl.offsetLeft);
-		if(-oUl.offsetLeft>3840)
+		console.log("1offsetleft-------->"+oUl.offsetLeft);
+		if(-oUl.offsetLeft>oUl.offsetWidth/2)
 		{
+			
 			oUl.style.left = 0+'px'; 
 		}
 		oUl.style.left = oUl.offsetLeft -speed + 'px';  
@@ -45,42 +46,7 @@ window.onload = function()
 		scrolltimer =setTimeout(start,1);
 		//move();
 	}
-	function move()
-	{   
-		
-		
-		
-		offsetleft=oUl.offsetLeft;
-		if(stop!=0)
-		{
-			
-			if((offsetleft)%160==0)
-			{
-			console.log("offsetleft-------->"+offsetleft);
-			clearTimeout(scrolltimer);
-		
-			stop=0;
-			var scrolltimer =setTimeout(move,6000);
-			
-			//stop();
-			return;
-			}
-		}
-		
-		if(oUl.offsetLeft< -(oUl.offsetWidth/2))
-		{   //向左滚动，当靠左的图4移出边框时         
-		oUl.style.left = 0;        
-		}         
-		if(oUl.offsetLeft > 0)
-		{//向右滚动，当靠右的图1移出边框时         
-		oUl.style.left = -(oUl.offsetWidth/2)+'px';        
-		}        
-		oUl.style.left = oUl.offsetLeft + speed + 'px';  
-		
-		stop=1;
-		scrolltimer =setTimeout(move,30);
-		
-	}
+	
 	function test(num)
 	{
 		console.log("test"+num);
