@@ -52,9 +52,9 @@ header
 }
 .scrollbox
 {
-	     width: 160px; 
+	     width: 100%; 
 	     height: 300px;
-	    margin: 100px auto;      
+	    margin: 0 auto;      
 	    background-color:#ff0000;      
 	    position: relative;      
 	    overflow: hidden;
@@ -73,7 +73,7 @@ header
 
  .scrollbox ul li{      
  	float: left;      
- 	width: 160px;      
+	width: 50%; 	     
  	height: 300px;      
  	list-style: none;    
  	}
@@ -81,41 +81,41 @@ header
 
 .li0
 {
-	width: 100%;
+	
 	height: 100%;
 	background-color:#00FFFF ;
 }
 
 .li1
 {
-	width: 100%;
+	
 	height: 100%;
 	background-color:#3B7796 ;
 }
 
 .li2
 {
-	width: 100%;
+	
 	height: 100%;
 	background-color:aliceblue ;
 }
 
 .li3
 {
-	width: 100%;
+	
 	height: 100%;
 	background-color: blueviolet;
 }
 
 .li4
 {
-	width: 100%;
+	
 	height: 100%;
 	background-color:chartreuse;
 }
 .li5
 {
-	width: 100%;
+	
 	height: 100%;
 	background-color:cornflowerblue ;
 }

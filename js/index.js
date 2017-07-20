@@ -4,24 +4,46 @@ window.onload = function()
 	var oDiv = document.getElementById('scrollbox'); 
 	
 	var oUl = document.getElementById('ul1');
-	var speed = 2;//初始化速度       
-	oUl.innerHTML += oUl.innerHTML;//图片内容*2-----参考图（2）
+	var screenwith=oDiv.offsetWidth;
+	var speed = 1;//初始化速度       
+	//oUl.innerHTML += oUl.innerHTML;//图片内容*2-----参考图（2）
 	var oLi= document.getElementsByTagName('li');     
-	oUl.style.width = oLi.length*160+'px';//设置ul的宽度使图片可以放下
+	oUl.style.width = oLi.length*screenwith+'px';//设置ul的宽度使图片可以放下
 	var oBtn1 = document.getElementById('btn1');    
 	var oBtn2 = document.getElementById('btn2');
 	var stop=0;
 	var offsetleft=oUl.offsetLeft;
-
-	var scrolltimer =setTimeout(start,30);
+	
+	console.log("offsetleft-------->"+screenwith);
+	
+	
+	var scrolltimer =setTimeout(start,1);
 	
 	function start()
 	{
-		oUl.style.left = oUl.offsetLeft + speed + 'px';  
+		if(stop!=0)
+		{
+			if(oUl.offsetLeft%screenwith==0)
+			{
+				//oUl.style.left = 0+'px'; 
+			    clearTimeout(scrolltimer);
+			    scrolltimer =setTimeout(start,10000);
+			    stop=0;
+			    return;
+			}
+		}
 		
 		
-		//scrolltimer =setTimeout(move,30);
-		move();
+		stop=1;
+		//console.log("1offsetleft-------->"+oUl.offsetLeft);
+		if(-oUl.offsetLeft>3840)
+		{
+			oUl.style.left = 0+'px'; 
+		}
+		oUl.style.left = oUl.offsetLeft -speed + 'px';  
+		
+		scrolltimer =setTimeout(start,1);
+		//move();
 	}
 	function move()
 	{   
