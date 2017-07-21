@@ -55,7 +55,7 @@ header
 	     width: 100%; 
 	     height: 300px;
 	    margin: 0 auto;      
-	    background-color:#ff0000;      
+	        
 	    position: relative;      
 	    overflow: hidden;
 }
@@ -66,7 +66,7 @@ header
 	left:0;      
 	top:0;      
 	overflow: hidden;      
-	background-color: #3b7796;    
+	 
 	}
 
 
@@ -130,13 +130,13 @@ header
 	text-align: center;
 	margin-top: 50px;
 }
-.textBox button
+.mybutton
 {
-	font-size: 23px;
-	padding: 20px 0;
+	font-size: 2em;
+	padding: 30px 0;
 	width: 80%;
 	margin: 20px auto;
-	background-color: blue;
+	background-color:#00BFFF;
 	color: #fff;
 	
 	text-align: center;
@@ -169,7 +169,7 @@ header
 	background-color: #fff;
 	padding: 0px 30px;
 	margin: 20px 0px;
-	height: 100px;
+	height: 12em;
 	display: flex;
 	
 }
@@ -182,15 +182,16 @@ header
 }
 .list_logo img
 {
-	margin: 25px auto;
-	width: 50px;
-	height: 50px;
+	margin: 2em auto;
+	width: 8em;
+	height: 8em;
 	display: block;
 	
 }
 .list_content
 {
 	flex: 8;
+	margin-left: 5em;
 	
 	
 	height: 100px;
@@ -201,12 +202,13 @@ header
 {
 	font-size: 20px;
 	
-	margin-top: 25px;
-	line-height: 25px;
+	margin-top: 3em;
+	
 }
 .list_content .content
 {
 	font-size: 18px;
+	margin-top: 1em;
 	
 	
 	
@@ -221,7 +223,32 @@ header
 
 {
 	flex: 1;
+	margin:auto 0px;
+	
 
+}
+.list_jiantou img
+{
+	height: 40px;
+	width: 20px;
+}
+.findBox h3
+{
+	text-align: center;
+	margin-top: 30px;
+	font-size: 25px;
+}
+.findBox p
+{
+	margin-top: 20px;
+	text-align: center;
+	font-size: 20px;
+}
+.find_content_bg img
+{
+	
+	display: block;
+	margin: 20px auto;
 }
 .textBox p
 {
@@ -229,7 +256,81 @@ header
 	text-align: center;
 	margin-top: 50px;
 }
-.listBox .list_content .title
+
+.tag_list
 {
+	margin: 30px auto;
+	height: 50px;
+	width: 60%;
+	
+	
+
+	border: solid 1px gray;
+	border-radius: 3px;
+	
+	
+	background-color: #fff;
+}
+.tag_list div
+{
+	width: 33%;
+	height: 50px;
+	float: left;
+	line-height: 50px;
+	text-align: center;
+	
+	
+	color: grey;
+	
 	
 }
+.tag_list .tag_second
+{
+	border-left: solid 1px #aaaaaa;
+	border-right: solid 1px #aaaaaa;
+}
+.tuiguangBox h3
+{
+	text-align: center;
+	font-size: 2em;
+}
+.tuiguangBox p
+{
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 50px;
+	font-size: 1em;
+}
+.tuiguangbgBox img
+{
+	display: block;
+	width: 600px;
+	height: 1000px;
+	margin: 0 auto;
+	
+}
+.adListBox
+{
+		height: 300px;
+	  position: relative;      
+	  overflow: hidden;
+	  margin: 0 auto;
+	  width: 600px;
+}
+.adListBox ul
+{
+	position:absolute;      
+	left:0;      
+	top:0;    
+	width: 3000px;  
+	overflow: hidden;     
+}
+.adListBox li
+{
+	
+		width: 600px;
+	 	list-style: none; 
+	 	float: left;      
+}
+
+

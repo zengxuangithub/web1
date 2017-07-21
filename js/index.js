@@ -5,19 +5,21 @@ window.onload = function()
 	
 	var oUl = document.getElementById('ul1');
 	var screenwith=oDiv.offsetWidth;
-	var speed = 1;//初始化速度       
-	oUl.innerHTML += oUl.innerHTML;//图片内容*2-----参考图（2）
-	var oLi= document.getElementsByTagName('li');     
+	var speed = 1;//初始化速度     
+	
+	oUl.innerHTML = oUl.innerHTML+oUl.innerHTML;//图片内容*2-----参考图（2）
+	   
+	var scrollbox=document.getElementById("scrollbox");
+	var oLi= scrollbox.getElementsByTagName('li'); 
 	oUl.style.width = oLi.length*screenwith+'px';//设置ul的宽度使图片可以放下
-	var oBtn1 = document.getElementById('btn1');    
-	var oBtn2 = document.getElementById('btn2');
+	
 	var stop=0;
 	var offsetleft=oUl.offsetLeft;
 	
-	console.log("offsetleft-------->"+screenwith);
 	
 	
-	var scrolltimer =setTimeout(start,1);
+	
+	var scrolltimer =setTimeout(start,10);
 	
 	function start()
 	{
@@ -25,7 +27,8 @@ window.onload = function()
 		{
 			if(oUl.offsetLeft%screenwith==0)
 			{
-				//oUl.style.left = 0+'px'; 
+				
+				
 			    clearTimeout(scrolltimer);
 			    scrolltimer =setTimeout(start,10000);
 			    stop=0;
@@ -35,42 +38,81 @@ window.onload = function()
 		
 		
 		stop=1;
-		console.log("1offsetleft-------->"+oUl.offsetLeft);
+		
 		if(-oUl.offsetLeft>oUl.offsetWidth/2)
 		{
-			
+				
 			oUl.style.left = 0+'px'; 
 		}
+		
 		oUl.style.left = oUl.offsetLeft -speed + 'px';  
 		
-		scrolltimer =setTimeout(start,1);
-		//move();
-	}
-	
-	function test(num)
-	{
-		console.log("test"+num);
-	}
-	
-	function stop()
-	{
-		clearTimeout(scrolltimer);
-		
-		var scrolltimer =setTimeout(move,3000);
+		scrolltimer =setTimeout(start,10);
 		
 	}
-	oBtn1.addEventListener('click',function()
-	{        speed = -2;      },false);      
-	oBtn2.addEventListener('click',function()
-	{        speed = 2;      },false);      
-	//var timer = setInterval(move,3000);//全局变量 ，保存返回的定时器     
 	
-	/*oDiv.addEventListener('mouseout', function ()
-	{        //timer = setInterval(move,30000);    
-		console.log("宽---->"+oUl.offsetLeft);
-	},false);
-	oDiv.addEventListener('mousemove', function () 
-	{       
-		//clearInterval(timer);//鼠标移入清除定时器
-	},false);    */
+	
+	
+	
+	var myscrollUl=document.getElementById("adUl");
+	 
+	myscrollUl.addEventListener("touchstart",ulStart,false);
+	myscrollUl.addEventListener("touchmove",ulSmove,false);
+	myscrollUl.addEventListener("touchend",ulEnd,false);
+	var myli=myscrollUl.getElementsByTagName("li");
+	  console.log("with----------->"+myli[0].offsetWidth); 
+	 
+	var myleft=myscrollUl.offsetLeft;
+	
+	var startx,endx;
+	function ulStart(event)
+	{
+		 var touch = event.touches[0];
+	    
+           startx = touch.pageX;
+           
+	}
+	
+	
+	function ulSmove(event)
+	{
+		 var touch = event.touches[0];
+                
+                 //myleft=myscrollUl.offsetLeft;
+                endx=touch.pageX;
+                //myleft=myscrollUl.offsetLeft;
+                var leng=touch.pageX-startx;
+              console.log("myleft----------->"+myleft); 
+                if(leng>0)
+                {
+                	//向右滑
+                	   //console.log("右边move----------->"+leng); 
+                	myscrollUl.style.left=myleft+leng+"px";
+                }
+                else
+                {
+                	//向左滑
+                	  //console.log("左边move----------->"+leng); 
+                	myscrollUl.style.left=myleft+leng+"px";
+                }
+                
+                
+              
+	}
+	
+	 function ulEnd(event) 
+	 {
+	 	myleft=myscrollUl.offsetLeft;
+               // console.log("startx-----------"+startx); 
+               // console.log("endx-----------"+endx);
+               // myscrollUl.style.left=
+              // var touch =event.touches[0];
+              
+                
+      }
+	
+	
+	
+	
+	
 }
