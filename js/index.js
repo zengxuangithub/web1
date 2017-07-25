@@ -5,7 +5,7 @@ window.onload = function()
 	
 	var oUl = document.getElementById('ul1');
 	var screenwith=oDiv.offsetWidth;
-	var speed = 1;//初始化速度     
+	var speed = 4;//初始化速度     
 	
 	oUl.innerHTML = oUl.innerHTML+oUl.innerHTML;//图片内容*2-----参考图（2）
 	   
@@ -110,6 +110,7 @@ window.onload = function()
 	
 	var adsrollTime;
 	var backTime;
+	var  backSpeed=1;
 	 function ulEnd(event) 
 	 {
 	 	event.preventDefault();
@@ -122,16 +123,16 @@ window.onload = function()
 	 			 
 	 			 if(isstart)
 	 			 {
-	 			 		console.log("isstart----------->"+myscrollUl.offsetLeft); 
+	 			 		
 	 			 		myscrollUl.style.left =0+'px'; 
 	 			 		myleft=0;
 	 			 		return;
-	 			 	//backmove(1);
+	 			 
 	 			 }
 	 				if(leng<50)
                 	  
        				 	 {
-       				  		backTime =setTimeout(backmove(1),1);
+       				  		backTime =setInterval(backLeft,1);
                 	   	
         				}
                 	   else
@@ -139,13 +140,14 @@ window.onload = function()
         	        	  if(leng>600) 
         	        	  {
         	        	  	ulLeftpostion=600+ulLeftpostion;
-        	        	  	backTime =setTimeout(backmove(1),1);
+        	        	  	backTime =setInterval(backLeft,1);
         	        	  }
         	        	  else
         	        	  {
         	        	  	ulLeftpostion=600+ulLeftpostion;
-        	        	  	 //console.log("myleft----------->"+(600+ulLeftpostion)); 
-        	        	  	backTime =setTimeout(backmove(0),1);
+        	        	
+        	        	  	backTime =setInterval(backRight,1);
+        	        	  	
         	        	  }
         			 	}
 	 	}
@@ -154,7 +156,7 @@ window.onload = function()
 	 		
 	 			if(isend)
 	 			 {
-	 			 		console.log("isend----------->"+myscrollUl.offsetWidth); 
+	 			 		
 	 			 		myscrollUl.style.left =-myscrollUl.offsetWidth+600+'px'; 
 	 			 		myleft=-2400;
 	 			 		return;
@@ -162,25 +164,27 @@ window.onload = function()
 	 		
 	 				if(leng>-50)
                 	  
-       				  {
-       				  		backTime =setTimeout(backmove(1),1);
+       				  	{
+       				  		backTime =setInterval(backRight,1);
+
                 	   	
         				}
                 	   else
       					{
         	        	  if(leng<-600) 
-        	        	  {
+        	        	  	{
         	        	  	ulLeftpostion=-600+ulLeftpostion;
-        	        	  	backTime =setTimeout(backmove(0),1);
-        	        	  }
+        	        	  	backTime =setInterval(backRight,1);
+        	        	  	
+        	        	  	
+        	        	
+        	        	 	 }
         	        	  else
-        	        	  {
+        	        	  	{
         	        	  	ulLeftpostion=-600+ulLeftpostion;
-        	        
-        	        	  	//backTime =setTimeout(backmove(1),1);
-        	        	  	backmove(1);
-        	        	  	//console.log("ulEnd----------->"+myscrollUl.offsetLeft); 
-        	        	  }
+        	        		
+        	        		backTime =setInterval(backLeft,1);
+        	             	 }
         			 	}
 	 	}
 	 
@@ -189,15 +193,13 @@ window.onload = function()
                 
       }
 	 
-	 
-	 function backmove(isleft)
+	 function backLeft()
 	 {
-	 	
-	 
-	 	if(myscrollUl.offsetLeft==ulLeftpostion)  
+	 		if(myscrollUl.offsetLeft==ulLeftpostion)  
 	 	{
-	 		console.log("stop----------->"+myscrollUl.offsetLeft); 
+	 		console.log("backLeft----------->"+myscrollUl.offsetLeft); 
 	 		clearTimeout(backTime);
+	 		backSpeed=1;
 	 		ulLeftpostion=myscrollUl.offsetLeft;
 	 		myleft=myscrollUl.offsetLeft;
 	 		if(ulLeftpostion==-2400)
@@ -206,7 +208,7 @@ window.onload = function()
 	 			isstart=false;
 	 		}
 	 		
-	 	 else	if(ulLeftpostion==0)
+	 	 	else	if(ulLeftpostion==0)
 	 		{
 	 			isend=false;
 	 			isstart=true;
@@ -218,27 +220,53 @@ window.onload = function()
 	 		}
 	 		return;
 	 	}
-	 	if(isleft==1)
-	 	{
-	 		myscrollUl.style.left = (myscrollUl.offsetLeft -1)+'px'; 
-	 		console.log("myleft----------->"+myscrollUl.offsetLeft);
-	 		backTime =setTimeout(backmove(1),30);
-	 		
-	 	}
-	 	else
-	 	{
-	 		console.log("offsetLeft----------->"+myscrollUl.offsetLeft); 
-	 		myscrollUl.style.left = myscrollUl.offsetLeft +1 + 'px';
-	 		backTime =setTimeout(backmove(0),1);
-	 			 
-	 	}
+	 	//backSpeed++;
+	 	myscrollUl.style.left = myscrollUl.offsetLeft -1 + 'px';
 	 	
 	 	
 	 }
 	 
-	
-	
-	
+	 function backRight()
+	 {
+	 	
+	 
+	 	if(myscrollUl.offsetLeft==ulLeftpostion)  
+	 	{
+	 		console.log("backRight----------->"+myscrollUl.offsetLeft); 
+	 		clearTimeout(backTime);
+	 		ulLeftpostion=myscrollUl.offsetLeft;
+	 		myleft=myscrollUl.offsetLeft;
+	 		backSpeed=1;
+	 		if(ulLeftpostion==-2400)
+	 		{
+	 			isend=true;
+	 			isstart=false;
+	 		}
+	 		
+	 	 	else	if(ulLeftpostion==0)
+	 		{
+	 			isend=false;
+	 			isstart=true;
+	 		}
+	 		else
+	 		{
+	 			isend=false;
+	 			isstart=false;
+	 		}
+	 		return;
+	 	}
+		 //backSpeed++;
+	 		myscrollUl.style.left = myscrollUl.offsetLeft +backSpeed + 'px';
+	 	
+	 		
+	 	
+	 
+	 	
+	 	
+	 }
+	 
+	 
+	 
 	
 	
 	
