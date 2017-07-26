@@ -15,6 +15,19 @@ window.onload = function()
 	
 	var stop=0;
 	var offsetleft=oUl.offsetLeft;
+	var topBtn=document.getElementById("topBtn");
+	window.onscroll=function()
+	{
+		
+		if(document.body.scrollTop>1000)
+		{
+		topBtn.style.display="inline";
+		}
+		else
+		{
+		topBtn.style.display="none";
+		}
+	}
 	
 	
 	
@@ -110,7 +123,7 @@ window.onload = function()
 	
 	var adsrollTime;
 	var backTime;
-	var  backSpeed=1;
+	//var  backSpeed=7;
 	 function ulEnd(event) 
 	 {
 	 	event.preventDefault();
@@ -197,9 +210,9 @@ window.onload = function()
 	 {
 	 		if(myscrollUl.offsetLeft==ulLeftpostion)  
 	 	{
-	 		console.log("backLeft----------->"+myscrollUl.offsetLeft); 
+	 		console.log("backLeftStop----------->"+myscrollUl.offsetLeft); 
 	 		clearTimeout(backTime);
-	 		backSpeed=1;
+	 		//backSpeed=1;
 	 		ulLeftpostion=myscrollUl.offsetLeft;
 	 		myleft=myscrollUl.offsetLeft;
 	 		if(ulLeftpostion==-2400)
@@ -221,7 +234,8 @@ window.onload = function()
 	 		return;
 	 	}
 	 	//backSpeed++;
-	 	myscrollUl.style.left = myscrollUl.offsetLeft -1 + 'px';
+	 	console.log("backLeft----------->"+ulLeftpostion); 
+	 	myscrollUl.style.left = myscrollUl.offsetLeft -6+ 'px';
 	 	
 	 	
 	 }
@@ -236,7 +250,7 @@ window.onload = function()
 	 		clearTimeout(backTime);
 	 		ulLeftpostion=myscrollUl.offsetLeft;
 	 		myleft=myscrollUl.offsetLeft;
-	 		backSpeed=1;
+	 		//backSpeed=1;
 	 		if(ulLeftpostion==-2400)
 	 		{
 	 			isend=true;
@@ -256,7 +270,7 @@ window.onload = function()
 	 		return;
 	 	}
 		 //backSpeed++;
-	 		myscrollUl.style.left = myscrollUl.offsetLeft +backSpeed + 'px';
+	 		myscrollUl.style.left = myscrollUl.offsetLeft +6 + 'px';
 	 	
 	 		
 	 	
@@ -270,4 +284,58 @@ window.onload = function()
 	
 	
 	
+}
+
+function qiyeinputOnclik()
+{
+	var inputbox=document.getElementById("qiyeinputbox");
+	var qiyeinput=document.getElementById("qiyeinput");
+	inputbox.style.border="1px solid green";
+	qiyeinput.value="";
+	
+}
+function personinputOnclik()
+{
+	var inputbox=document.getElementById("personinputbox");
+	var personinput=document.getElementById("personinput");
+	inputbox.style.border="1px solid green";
+	personinput.value="";
+}
+function qiyeinputOut()
+{
+	var inputbox=document.getElementById("qiyeinputbox");
+	var phoneinput=document.getElementById("qiyeinput");
+		phoneinput.value="企业名称";
+	
+	inputbox.style.border="1px solid #888";
+}
+
+function personinputOut()
+{
+	var inputbox=document.getElementById("personinputbox");
+	var personinput=document.getElementById("personinput");
+		personinput.value="姓名(必填)";
+	
+	inputbox.style.border="1px solid #888";
+}
+
+function phoneinputOnclik()
+{
+	var inputbox=document.getElementById("phoneinputbox");
+	var phoneinput=document.getElementById("phoneinput");
+	
+	phoneinput.value="";
+	inputbox.style.border="1px solid green";
+}
+function phoneinputOut()
+{
+	var inputbox=document.getElementById("phoneinputbox");
+	var phoneinput=document.getElementById("phoneinput");
+		phoneinput.value="姓名(必填)";
+	
+	inputbox.style.border="1px solid #888";
+}
+function Totop()
+{
+	document.body.scrollTop=0;
 }
