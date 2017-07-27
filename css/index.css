@@ -1,4 +1,4 @@
-
+﻿
 
 header
 {
@@ -134,6 +134,7 @@ header
 	font-size: 2rem;
 	text-align: center;
 	margin-top: 50px;
+	margin-left: 2rem;
 }
 
 .textBox p
@@ -141,6 +142,7 @@ header
 	font-size: 1.5rem;
 	text-align: center;
 	margin-top: 50px;
+	margin-left: 2rem;
 }
 
 .mybutton
@@ -168,6 +170,7 @@ header
 {
 	font-size: 1.7rem;
 	text-align: center;
+	margin-left: 2rem;
 }
 .listBox .title_p
 
@@ -175,7 +178,8 @@ header
 	font-size: 1.5rem;
 	margin-top: 20px;
 	text-align: center;
-	line-height: 25px;
+	line-height: 1.5rem;
+	margin-left: 2rem;
 }
 .listBox li
 {
@@ -191,29 +195,46 @@ header
 .list_logo 
 {
 	
+<<<<<<< HEAD
+		width: 10rem;
+	padding: 1rem;
+	display: -webkit-flex;
+	align-items: center;
+		height: 10rem;
+=======
 		
-	
+	width: 10rem;
+	height: 10rem;
+>>>>>>> origin/master170726
 	
 }
 .list_logo img
 {
 	
 
-
+<<<<<<< HEAD
+		
+		width: 10rem;
+	
+		height: 10rem;
+	
+=======
+	width: 10rem;
+	height: 10rem;
+>>>>>>> origin/master170726
 	
 	
 }
 .list_content
 {
-	flex: 5;
+	flex: 6;
 	
+	margin-left: 1rem;
+	margin-right: 1rem;
 	display: -webkit-flex;
 	flex-direction: column;
 	
 	justify-content: center;
-	
-	
-	
 	
 }
 .list_content li
@@ -225,7 +246,7 @@ header
 {
 	font-size: 2rem;
 	
-	
+	margin-left: 2rem;
 	
 }
 .list_content .content
@@ -257,14 +278,26 @@ header
 .findBox h3
 {
 	text-align: center;
+<<<<<<< HEAD
 	margin-top: 30px;
-	font-size: 25px;
+=======
+	margin: 1.5rem auto;
+	margin-left: 2rem;
+>>>>>>> origin/master170726
+	font-size: 2rem;
 }
 .findBox p
 {
-	margin-top: 20px;
+<<<<<<< HEAD
+	margin-top: 2rem;
 	text-align: center;
-	font-size: 20px;
+	font-size: 1.5rem;
+=======
+	margin: 1.5rem auto;
+	text-align: center;
+	font-size: 1.5rem;
+	margin-left: 2rem;
+>>>>>>> origin/master170726
 }
 .find_content_bg img
 {
@@ -275,8 +308,13 @@ header
 .tag_list
 {
 	margin: 30px auto;
-	height: 50px;
-	width: 60%;
+<<<<<<< HEAD
+	height: 80px;
+	width: 70%;
+=======
+	height: 4rem;
+	width: 80%;
+>>>>>>> origin/master170726
 	
 	
 
@@ -289,12 +327,18 @@ header
 .tag_list div
 {
 	width: 33%;
-	height: 50px;
+<<<<<<< HEAD
+	height: 80px;
 	float: left;
-	line-height: 50px;
+	line-height: 80px;
+=======
+	height: 4rem;
+	float: left;
+	line-height: 4rem;
+>>>>>>> origin/master170726
 	text-align: center;
 	
-	
+	font-size: 1.5rem;
 	color: grey;
 	
 	
@@ -308,13 +352,23 @@ header
 {
 	text-align: center;
 	font-size: 2em;
+	margin-left: 2rem;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
 }
 .tuiguangBox p
 {
 	text-align: center;
+<<<<<<< HEAD
 	margin-top: 20px;
 	margin-bottom: 50px;
-	font-size: 1em;
+=======
+	margin-bottom: 1.5rem ;
+	margin-top: 1.5rem;
+	margin-left:2rem;
+	
+>>>>>>> origin/master170726
+	font-size: 1.5em;
 }
 .tuiguangbgBox img
 {
@@ -347,5 +401,95 @@ header
 	 	list-style: none; 
 	 	float: left;      
 }
+.guideBox 
+{
+	width: 80%;
+	height: 20px;
+	margin: 20px auto;
+	display: flex;
+	
+	
+}
+.guideBox span
+{
+	flex: 1;
+	background-color: #808080;
+	margin: 0 10px;
+	
+}
+.guideBox td
+{
+	width: 20%;
+	height: 100%;
+	display: block;
+	background-color: #808080;
+}
 
+.connetBox h3
 
+{
+	margin-left: 2rem;
+	margin-bottom: 2rem;
+	margin-top: 2rem;
+	font-size: 2rem;
+}
+.connetBox p
+
+{
+	margin-left: 2rem;
+	margin-bottom: 2rem;
+	margin-top: 2rem;
+	font-size: 1.5rem;
+}
+.connetBox div
+{
+	border: solid 1px #eee;
+	margin: 1rem 4rem;
+	height: 5rem;
+	display: -webkit-flex;
+	align-items: center;
+	border: 1px solid #888;
+}
+.connetBox div img
+{
+	height: 4rem;
+	display: block;
+	
+	width: 4rem;
+	margin-left: 2rem;
+
+}
+.connetBox div input
+{
+	border: none;
+	margin-left: 2rem;
+	font-size: 2rem;
+	height: 3rem;
+	flex: 1;
+	outline: none;
+}
+footer
+{
+	font-size: 1.2rem;
+	background-color: black;
+	color: #fff;
+	text-align: center;
+	
+	height: 5rem;
+}
+footer p
+{
+	
+	line-height: 5rem;
+}
+.top
+{
+	width: 5rem;
+	height: 5rem;
+	text-align: center;
+	line-height: 5rem;
+	background-color: #6495ED;
+	position: fixed;
+   	right: 2rem;
+   	bottom: 5rem;
+}
