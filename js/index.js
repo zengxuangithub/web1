@@ -5,7 +5,7 @@ window.onload = function()
 	
 	var oUl = document.getElementById('ul1');
 	var screenwith=oDiv.offsetWidth;
-	var speed = 4;//初始化速度     
+	var speed = 6;//初始化速度     
 	
 	oUl.innerHTML = oUl.innerHTML+oUl.innerHTML;//图片内容*2-----参考图（2）
 	   
@@ -14,6 +14,7 @@ window.onload = function()
 	oUl.style.width = oLi.length*screenwith+'px';//设置ul的宽度使图片可以放下
 	
 	var stop=0;
+	var scrollTimes=1;
 	var offsetleft=oUl.offsetLeft;
 	var topBtn=document.getElementById("topBtn");
 	window.onscroll=function()
@@ -38,15 +39,28 @@ window.onload = function()
 	{
 		if(stop!=0)
 		{
-			if(oUl.offsetLeft%screenwith==0)
-			{
+			
+				if(oUl.offsetLeft<=-screenwith*scrollTimes)
+				{
 				
-				
+				console.log("右边move----------->"+leng); 
 			    clearTimeout(scrolltimer);
 			    scrolltimer =setTimeout(start,10000);
 			    stop=0;
+			    if(scrollTimes==4)
+			   	 {
+			   	 	scrollTimes=0;
+			   	 }
+			   	 else
+			   	 {
+			   	 	 scrollTimes=1+scrollTimes;
+			   	 }
+			   
 			    return;
-			}
+				}
+			
+		
+			
 		}
 		
 		
@@ -66,6 +80,32 @@ window.onload = function()
 	
 	
 	
+	
+	
+	//请求logo图片
+	var xmlHttp=new XMLHttpRequest();
+	xmlHttp.open("GET","/web1/API/getLogo.php",true);
+    xmlHttp.setRequestHeader("Content-Type","text/json");
+     var httpState=xmlHttp.status;
+    xmlHttp.onreadystatechange=callback;//状态信息发生改变调用函数
+    xmlHttp.send();
+	//var logoUrl=
+	
+	
+	
+	function callback()
+	{
+		if(xmlHttp.readyState==4){//响应完毕后
+        if(xmlHttp.status==200){//http状态码为200时
+            var result=xmlHttp.responseText;//获取ajax请求的文本内容
+            var logoinfo=JSON.parse(result);
+            var logo=document.getElementById("logo");
+            logo.src=logoinfo.img;
+            alert(logoinfo.img);
+        }
+    }
+		//alert(httpState);
+	}
 	
 	var myscrollUl=document.getElementById("adUl");
 	 
@@ -106,7 +146,7 @@ window.onload = function()
                 if(leng>0)
                 {
                 	//向右滑
-                	   //console.log("右边move----------->"+leng); 
+                	   //
                 	   
                 	myscrollUl.style.left=myleft+leng+"px";
                 }
@@ -208,9 +248,13 @@ window.onload = function()
 	 
 	 function backLeft()
 	 {
-	 		if(myscrollUl.offsetLeft==ulLeftpostion)  
+	 		if(myscrollUl.offsetLeft<=ulLeftpostion)  
 	 	{
 	 		console.log("backLeftStop----------->"+myscrollUl.offsetLeft); 
+
+
+	 		myscrollUl.style.left = ulLeftpostion+ 'px';
+
 	 		clearTimeout(backTime);
 	 		//backSpeed=1;
 	 		ulLeftpostion=myscrollUl.offsetLeft;
@@ -234,7 +278,11 @@ window.onload = function()
 	 		return;
 	 	}
 	 	//backSpeed++;
+
 	 	console.log("backLeft----------->"+ulLeftpostion); 
+
+	 	console.log("backLeft----------->"+myscrollUl.offsetLeft); 
+
 	 	myscrollUl.style.left = myscrollUl.offsetLeft -6+ 'px';
 	 	
 	 	
@@ -244,9 +292,11 @@ window.onload = function()
 	 {
 	 	
 	 
-	 	if(myscrollUl.offsetLeft==ulLeftpostion)  
+	 	if(myscrollUl.offsetLeft>=ulLeftpostion)  
 	 	{
-	 		console.log("backRight----------->"+myscrollUl.offsetLeft); 
+	 		console.log("backRight----------->"+myscrollUl.offsetLeft);
+	 		myscrollUl.style.left = ulLeftpostion+ 'px';
+
 	 		clearTimeout(backTime);
 	 		ulLeftpostion=myscrollUl.offsetLeft;
 	 		myleft=myscrollUl.offsetLeft;
