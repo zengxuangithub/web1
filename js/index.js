@@ -98,7 +98,14 @@ window.onload = function()
 		if(xmlHttp.readyState==4){//响应完毕后
         if(xmlHttp.status==200){//http状态码为200时
             var result=xmlHttp.responseText;//获取ajax请求的文本内容
+<<<<<<< HEAD
             alert(result);
+=======
+            var logoinfo=JSON.parse(result);
+            var logo=document.getElementById("logo");
+            logo.src=logoinfo.img;
+            alert(logoinfo.img);
+>>>>>>> origin/master170731
         }
     }
 		//alert(httpState);
@@ -248,7 +255,14 @@ window.onload = function()
 	 		if(myscrollUl.offsetLeft<=ulLeftpostion)  
 	 	{
 	 		console.log("backLeftStop----------->"+myscrollUl.offsetLeft); 
+<<<<<<< HEAD
 	 		myscrollUl.style.left = ulLeftpostion+ 'px';
+=======
+
+
+	 		myscrollUl.style.left = ulLeftpostion+ 'px';
+
+>>>>>>> origin/master170731
 	 		clearTimeout(backTime);
 	 		//backSpeed=1;
 	 		ulLeftpostion=myscrollUl.offsetLeft;
@@ -272,7 +286,15 @@ window.onload = function()
 	 		return;
 	 	}
 	 	//backSpeed++;
+<<<<<<< HEAD
 	 	console.log("backLeft----------->"+myscrollUl.offsetLeft); 
+=======
+
+	 	console.log("backLeft----------->"+ulLeftpostion); 
+
+	 	console.log("backLeft----------->"+myscrollUl.offsetLeft); 
+
+>>>>>>> origin/master170731
 	 	myscrollUl.style.left = myscrollUl.offsetLeft -6+ 'px';
 	 	
 	 	

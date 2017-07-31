@@ -7,3 +7,9 @@ html
 li{list-style:none}
 
 img{vertical-align:top;border:none}
+
+input
+{
+ border: none;
+ 
+}
