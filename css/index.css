@@ -195,41 +195,35 @@ header
 .list_logo 
 {
 	
-<<<<<<< HEAD
+
 		width: 10rem;
 	padding: 1rem;
 	display: -webkit-flex;
 	align-items: center;
 		height: 10rem;
-=======
+
 		
 	width: 10rem;
 	height: 10rem;
-<<<<<<< HEAD
-=======
->>>>>>> origin/master170726
->>>>>>> origin/master170727
+
 	
 }
 .list_logo img
 {
 	
 
-<<<<<<< HEAD
 	width: 10rem;
 	height: 10rem;
-=======
-<<<<<<< HEAD
+
 		
 		width: 10rem;
 	
 		height: 10rem;
 	
-=======
+
 	width: 10rem;
 	height: 10rem;
->>>>>>> origin/master170726
->>>>>>> origin/master170727
+
 	
 	
 }
@@ -286,37 +280,33 @@ header
 .findBox h3
 {
 	text-align: center;
-<<<<<<< HEAD
+
 	margin: 1.5rem auto;
 	margin-left: 2rem;
-=======
-<<<<<<< HEAD
+
+
 	margin-top: 30px;
-=======
+
 	margin: 1.5rem auto;
 	margin-left: 2rem;
->>>>>>> origin/master170726
->>>>>>> origin/master170727
+
+
 	font-size: 2rem;
 }
 .findBox p
 {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+
+
+
 	margin-top: 2rem;
 	text-align: center;
 	font-size: 1.5rem;
-=======
->>>>>>> origin/master170727
+
 	margin: 1.5rem auto;
 	text-align: center;
 	font-size: 1.5rem;
 	margin-left: 2rem;
-<<<<<<< HEAD
-=======
->>>>>>> origin/master170726
->>>>>>> origin/master170727
+
 }
 .find_content_bg img
 {
@@ -327,19 +317,17 @@ header
 .tag_list
 {
 	margin: 30px auto;
-<<<<<<< HEAD
+
 	height: 4rem;
 	width: 80%;
-=======
-<<<<<<< HEAD
+
+
 	height: 80px;
 	width: 70%;
-=======
+
 	height: 4rem;
 	width: 80%;
->>>>>>> origin/master170726
->>>>>>> origin/master170727
-	
+
 	
 
 	border: solid 1px gray;
@@ -351,21 +339,19 @@ header
 .tag_list div
 {
 	width: 33%;
-<<<<<<< HEAD
+
 	height: 4rem;
 	float: left;
 	line-height: 4rem;
-=======
-<<<<<<< HEAD
+
 	height: 80px;
 	float: left;
 	line-height: 80px;
-=======
+
 	height: 4rem;
 	float: left;
 	line-height: 4rem;
->>>>>>> origin/master170726
->>>>>>> origin/master170727
+
 	text-align: center;
 	
 	font-size: 1.5rem;
@@ -389,21 +375,15 @@ header
 .tuiguangBox p
 {
 	text-align: center;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+
 	margin-top: 20px;
 	margin-bottom: 50px;
-=======
->>>>>>> origin/master170727
+
 	margin-bottom: 1.5rem ;
 	margin-top: 1.5rem;
 	margin-left:2rem;
 	
-<<<<<<< HEAD
-=======
->>>>>>> origin/master170726
->>>>>>> origin/master170727
+
 	font-size: 1.5em;
 }
 .tuiguangbgBox img
@@ -494,7 +474,7 @@ header
 	width: 4rem;
 	margin-left: 2rem;
 
-<<<<<<< HEAD
+
 .connetBox h3
 
 {
@@ -528,8 +508,6 @@ header
 	width: 4rem;
 	margin-left: 2rem;
 
-=======
->>>>>>> origin/master170727
 }
 .connetBox div input
 {

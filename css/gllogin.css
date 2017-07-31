@@ -1,0 +1,30 @@
+.glLoginBox
+{
+	width: 400px;
+	height: 400px;
+	text-align: center;
+	
+	
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -200px;
+	margin-left: -200px;
+   	background-color: #DCDCDC;
+}
+.glLoginBox h3
+{
+	margin: 30px auto;
+}
+.login_box
+{
+
+	text-align: center;
+	border: 1px solid #FFFFFF;
+	width: 300px;
+	background-color: #AAAAAA;
+	height: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 50px;
+}
