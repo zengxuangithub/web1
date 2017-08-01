@@ -99,13 +99,22 @@ window.onload = function()
         if(xmlHttp.status==200){//http状态码为200时
             var result=xmlHttp.responseText;//获取ajax请求的文本内容
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+            alert(result);
+=======
+>>>>>>> origin/master170802
             var logoinfo=JSON.parse(result);
             var logo=document.getElementById("logo");
             logo.src=logoinfo.img;
             alert(logoinfo.img);
+<<<<<<< HEAD
 =======
             alert(result);
 >>>>>>> origin/master170801
+=======
+>>>>>>> origin/master170731
+>>>>>>> origin/master170802
         }
     }
 		//alert(httpState);
@@ -256,13 +265,22 @@ window.onload = function()
 	 	{
 	 		console.log("backLeftStop----------->"+myscrollUl.offsetLeft); 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+	 		myscrollUl.style.left = ulLeftpostion+ 'px';
+=======
+>>>>>>> origin/master170802
 
 
 	 		myscrollUl.style.left = ulLeftpostion+ 'px';
 
+<<<<<<< HEAD
 =======
 	 		myscrollUl.style.left = ulLeftpostion+ 'px';
 >>>>>>> origin/master170801
+=======
+>>>>>>> origin/master170731
+>>>>>>> origin/master170802
 	 		clearTimeout(backTime);
 	 		//backSpeed=1;
 	 		ulLeftpostion=myscrollUl.offsetLeft;
@@ -287,14 +305,23 @@ window.onload = function()
 	 	}
 	 	//backSpeed++;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+	 	console.log("backLeft----------->"+myscrollUl.offsetLeft); 
+=======
+>>>>>>> origin/master170802
 
 	 	console.log("backLeft----------->"+ulLeftpostion); 
 
 	 	console.log("backLeft----------->"+myscrollUl.offsetLeft); 
 
+<<<<<<< HEAD
 =======
 	 	console.log("backLeft----------->"+myscrollUl.offsetLeft); 
 >>>>>>> origin/master170801
+=======
+>>>>>>> origin/master170731
+>>>>>>> origin/master170802
 	 	myscrollUl.style.left = myscrollUl.offsetLeft -6+ 'px';
 	 	
 	 	
