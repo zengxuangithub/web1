@@ -42,6 +42,7 @@
   		}
   		else
  		 {
+ 		 	
  		 	$url="select id from admins where user='".$_GET["user"]."';";
 			$result=$mysqli->query($url);
 			while ($rows=mysqli_fetch_assoc($result))
