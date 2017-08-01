@@ -195,35 +195,58 @@ header
 .list_logo 
 {
 	
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/master170801
 		width: 10rem;
 	padding: 1rem;
 	display: -webkit-flex;
 	align-items: center;
 		height: 10rem;
+<<<<<<< HEAD
 
 		
 	width: 10rem;
 	height: 10rem;
 
+=======
+=======
+		
+	width: 10rem;
+	height: 10rem;
+>>>>>>> origin/master170726
+>>>>>>> origin/master170801
 	
 }
 .list_logo img
 {
 	
 
+<<<<<<< HEAD
 	width: 10rem;
 	height: 10rem;
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/master170801
 		
 		width: 10rem;
 	
 		height: 10rem;
 	
+<<<<<<< HEAD
 
 	width: 10rem;
 	height: 10rem;
 
+=======
+=======
+	width: 10rem;
+	height: 10rem;
+>>>>>>> origin/master170726
+>>>>>>> origin/master170801
 	
 	
 }
@@ -280,6 +303,7 @@ header
 .findBox h3
 {
 	text-align: center;
+<<<<<<< HEAD
 
 	margin: 1.5rem auto;
 	margin-left: 2rem;
@@ -291,10 +315,19 @@ header
 	margin-left: 2rem;
 
 
+=======
+<<<<<<< HEAD
+	margin-top: 30px;
+=======
+	margin: 1.5rem auto;
+	margin-left: 2rem;
+>>>>>>> origin/master170726
+>>>>>>> origin/master170801
 	font-size: 2rem;
 }
 .findBox p
 {
+<<<<<<< HEAD
 
 
 
@@ -302,11 +335,22 @@ header
 	text-align: center;
 	font-size: 1.5rem;
 
+=======
+<<<<<<< HEAD
+	margin-top: 2rem;
+	text-align: center;
+	font-size: 1.5rem;
+=======
+>>>>>>> origin/master170801
 	margin: 1.5rem auto;
 	text-align: center;
 	font-size: 1.5rem;
 	margin-left: 2rem;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master170726
+>>>>>>> origin/master170801
 }
 .find_content_bg img
 {
@@ -317,6 +361,7 @@ header
 .tag_list
 {
 	margin: 30px auto;
+<<<<<<< HEAD
 
 	height: 4rem;
 	width: 80%;
@@ -328,6 +373,16 @@ header
 	height: 4rem;
 	width: 80%;
 
+=======
+<<<<<<< HEAD
+	height: 80px;
+	width: 70%;
+=======
+	height: 4rem;
+	width: 80%;
+>>>>>>> origin/master170726
+	
+>>>>>>> origin/master170801
 	
 
 	border: solid 1px gray;
@@ -339,6 +394,7 @@ header
 .tag_list div
 {
 	width: 33%;
+<<<<<<< HEAD
 
 	height: 4rem;
 	float: left;
@@ -352,6 +408,17 @@ header
 	float: left;
 	line-height: 4rem;
 
+=======
+<<<<<<< HEAD
+	height: 80px;
+	float: left;
+	line-height: 80px;
+=======
+	height: 4rem;
+	float: left;
+	line-height: 4rem;
+>>>>>>> origin/master170726
+>>>>>>> origin/master170801
 	text-align: center;
 	
 	font-size: 1.5rem;
@@ -375,15 +442,26 @@ header
 .tuiguangBox p
 {
 	text-align: center;
+<<<<<<< HEAD
 
 	margin-top: 20px;
 	margin-bottom: 50px;
 
+=======
+<<<<<<< HEAD
+	margin-top: 20px;
+	margin-bottom: 50px;
+=======
+>>>>>>> origin/master170801
 	margin-bottom: 1.5rem ;
 	margin-top: 1.5rem;
 	margin-left:2rem;
 	
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master170726
+>>>>>>> origin/master170801
 	font-size: 1.5em;
 }
 .tuiguangbgBox img
@@ -450,6 +528,7 @@ header
 	font-size: 2rem;
 }
 .connetBox p
+<<<<<<< HEAD
 
 {
 	margin-left: 2rem;
@@ -484,6 +563,8 @@ header
 	font-size: 2rem;
 }
 .connetBox p
+=======
+>>>>>>> origin/master170801
 
 {
 	margin-left: 2rem;
