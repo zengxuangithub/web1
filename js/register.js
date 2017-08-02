@@ -5,7 +5,7 @@ function getFocus(element)
 		element.value="";
 		if(element.id=="pwd")
 		{
-			//console.log("password----");
+			
 			element.type="password";
 		}
 		
@@ -26,11 +26,12 @@ function lostFocus(myelement)
 				
 				{
 			
+				console.log("lostFocus");
 				
 				//ajax 请求用户名
 				var user=myelement.value;
 				 xmlhttp=new XMLHttpRequest();
-				xmlhttp.open("GET","/web1/API/getAdmininfo.php?user="+user,true);
+				xmlhttp.open("GET","/web1/API/register.php?user="+user,true);
 				xmlhttp.setRequestHeader("Content-Type","text/json");
 				
    				xmlhttp.onreadystatechange=CheckUsercallback;//状态信息发生改变调用函数
@@ -68,10 +69,18 @@ function lostFocus(myelement)
 		            var result=xmlhttp.responseText;//获取ajax请求的文本内容
 		            var admininfo=JSON.parse(result);
 		          
+		          	var img=document.getElementById("okimg");
 		            if(admininfo.error!="0")
 		            {
-		            alert(admininfo.info);
-		            	
+		           
+		            img.style.display="block";
+		            img.src="img/error.png";
+		             alert(admininfo.info);	
+		            }
+		            else
+		            {
+		            	img.style.display="block";
+		           		 img.src="img/ok.png";
 		            }
 
 		        }
@@ -83,8 +92,8 @@ function lostFocus(myelement)
 		
 		
 }
-
-function login()
+ 
+function register()
 {
 	var userStr=document.getElementById("user").value;
 	var pwdStr=document.getElementById("pwd").value;
@@ -95,7 +104,7 @@ function login()
 	{
 				
 				 xmlhttp=new XMLHttpRequest();
-				xmlhttp.open("GET","/web1/API/getAdmininfo.php?user="+userStr+"&pwd="+pwdStr,true);
+				xmlhttp.open("GET","/web1/API/register.php?user="+userStr+"&pwd="+pwdStr,true);
 				xmlhttp.setRequestHeader("Content-Type","text/json");
 				
    				xmlhttp.onreadystatechange=CheckPwdcallback;//状态信息发生改变调用函数
